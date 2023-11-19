@@ -2,10 +2,12 @@
 
 [https://github.com/projectdiscovery/subfinder](https://github.com/projectdiscovery/subfinder)
 
+# IMPORTANTE: Configurar APIS
+
 Primero debemos configurar las APIs para que la busqueda sea mas exitosa.\
 Para listar todas las apis
 
-```
+```ruby
 subfinder -ls
 ```
 
@@ -13,7 +15,7 @@ subfinder -ls
 
 Debemos configurar las API es la ruta
 
-```
+```ruby
 nvim /home/dxz/.config/subfinder/provider-config.yaml
 ```
 
@@ -24,7 +26,7 @@ Para correr el programa usamos.
 * Parametro -active busca solo subdominios activos
 * | lo exportamos la busqueda en un txt
 
-```
+```ruby
 subfinder -d hackerone.com -active | tee -a hackerone.txt
 ```
 
@@ -37,7 +39,7 @@ subfinder -d hackerone.com -active | tee -a hackerone.txt
 * Parametro -es quitar o excluir un motor de busqueda para realizar la busqueda
 * Parametro -rl tiempo de espera entre cada peticion
 
-```
+```ruby
 subfinder -dL target.txt -active | tee -a subdomains_targets.txt
 ```
 
