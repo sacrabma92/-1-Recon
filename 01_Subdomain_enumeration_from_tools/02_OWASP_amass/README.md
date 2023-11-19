@@ -55,7 +55,7 @@ Una vez configuradas las API podremos usar la tool.
 amass enum -d tinder.com -o subdomains_tinder.txt
 ```
 
-![label text](imgs/04.png
+![label text](imgs/04.png)
 
 
 
