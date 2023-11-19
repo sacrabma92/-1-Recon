@@ -51,7 +51,7 @@ amass enum --help
 Una vez configuradas las API podremos usar la tool.
 * Parametro -o es para el output de los subdominios
 
-```
+```ruby
 amass enum -d tinder.com -o subdomains_tinder.txt
 ```
 
