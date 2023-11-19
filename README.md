@@ -1,5 +1,4 @@
-# 01-Recon
-Instalar Httpx
+# Httpx
 
 Descargamos el binario le damos permisos de ejecución y lo copiamos en la ruta /usr/bin
 
