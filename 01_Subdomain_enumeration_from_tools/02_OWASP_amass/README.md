@@ -28,12 +28,16 @@ amass unum -list
 ![label text](imgs/02.png)
 
 Para configurar este archivo, vamos a google y buscamos.\
-Copiamos el raw en un archivo **config.ini** y empezamos a configurar las APIS
 
 [https://github.com/anthrax3/Amass-1/blob/master/examples/config.ini](https://github.com/anthrax3/Amass-1/blob/master/examples/config.ini)
 
 ```ruby
 amass config.ini github
+```
+
+Copiamos el raw en un archivo **config.ini** y empezamos a configurar las APIS
+
+```ruby
 nvim ~/.config/amass/config.ini
 ```
 
