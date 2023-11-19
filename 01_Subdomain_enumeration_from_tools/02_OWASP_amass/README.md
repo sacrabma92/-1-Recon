@@ -35,7 +35,7 @@ Para configurar este archivo, vamos a google y buscamos.\
 amass config.ini github
 ```
 
-Copiamos el raw en un archivo **config.ini** y empezamos a configurar las APIS
+Copiamos el raw en el archivo **config.ini** en la siguiente ruta:
 
 ```ruby
 nvim ~/.config/amass/config.ini
