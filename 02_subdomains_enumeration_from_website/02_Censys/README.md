@@ -1,5 +1,7 @@
 # Censys
 
+[Link Udemy](https://www.udemy.com/course/recon-for-bug-bounty-penetration-testers-ethical-hackers/learn/lecture/35439270#overview)
+
 [https://search.censys.io/](https://search.censys.io/)
 
 Debemos crear una cuenta.
