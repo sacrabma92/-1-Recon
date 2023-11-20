@@ -19,7 +19,8 @@ Descargamos el binario damos permisos de ejecución y lo copiamos a la ruta /usr
 Descargamos el binario damos permisos de ejecución y lo copiamos a la ruta /usr/bin
 Para descromprimir
 
+[https://github.com/tomnomnom/httprobe](https://github.com/tomnomnom/httprobe)
+
 ```ruby
 tar xvf .....
 ```
-[https://github.com/tomnomnom/httprobe](https://github.com/tomnomnom/httprobe)
