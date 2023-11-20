@@ -1,5 +1,9 @@
 # GetAllUrls
 
+Herramienta que permite buscar URL en el dominio
+
+![label text](imgs/01.png)
+
 [https://github.com/lc/gau](https://github.com/lc/gau)
 
 Descargamos el repositoio y ejecutamos los siguientes comando por separado
