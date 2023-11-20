@@ -24,3 +24,17 @@ Para descromprimir
 ```ruby
 tar xvf .....
 ```
+# Findomain
+
+[https://github.com/Findomain/Findomain](https://github.com/Findomain/Findomain)
+
+# fff
+Descargar el repositorio, e ingresamos en la carpeta y ejecutamos
+
+[https://github.com/tomnomnom/fff](https://github.com/tomnomnom/fff)
+
+Compilamos el programa y lo copiamos en /usr/bin
+
+```
+go build
+```
