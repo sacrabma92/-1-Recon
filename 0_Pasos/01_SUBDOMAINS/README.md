@@ -77,10 +77,10 @@ cd Sublist3r
 sudo pip install -r requirements.txt
 ```
 
-Lo dejamos en la carpeta /opt y para correr el programa usamos
+Lo dejamos en la carpeta /opt y para correr el programa usamos. Pegamos el archivo de salida en los demas
 
 ```ruby
- python3 sublist3r.py -d hackerone.com | tee -a ~/Bug_Bounty/RECON/sublist3r.txt
+sudo python3 sublist3r.py -d hackerone.com -o sublist3r.txt
 ```
 
 ![label text](imgs/03.png)
@@ -97,7 +97,7 @@ sudo nano crtsh.sh
 sudo chmod +x crtsh.sh
 ```
 
-Para ejecutar el programa usamos.
+Para ejecutar el programa usamo3.
 
 ```ruby
 crtsh.sh hackerone.com | tee -a crtsh.txt
