@@ -67,9 +67,17 @@ gospider -w -s https://hackerone.com -o link_hackerone.txt
 
 ## [WaybackUrls](https://github.com/tomnomnom/waybackurls)
 
-[Link Udemy](https://www.udemy.com/course/recon-for-bug-bounty-pentesting-ethicalhacking-by-shifa-rohit-hacktify/learn/lecture/21721090#questions)
+### [WayBack Burpsuite](https://www.udemy.com/course/recon-for-bug-bounty-pentesting-ethicalhacking-by-shifa-rohit-hacktify/learn/lecture/21762876#overview)
 
-# Escaner de URL
+-> AQUI: busamos en el link lo siguiente: ?url=hackerone.com/  y procedemos a cambiarlo por la url que necesitemos buscar y la pegamos en el navegador.
+
+```ruby
+https://web.archive.org/web/timemap/json?url=hackerone.com/&fl=timestamp:4,original,urlkey&matchType=prefix&filter=statuscode:200&filter=mimetype:text/html&collapse=urlkey&collapse=timestamp:4&limit=100000
+```
+
+### [WayBack Automation](https://www.udemy.com/course/recon-for-bug-bounty-pentesting-ethicalhacking-by-shifa-rohit-hacktify/learn/lecture/21762880#overview)
+
+# Buscador de Parametros
 
 ## [Secretfinder](https://github.com/m4ll0k/SecretFinder)
 
