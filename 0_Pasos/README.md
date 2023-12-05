@@ -92,7 +92,7 @@ Para ejecutar el programa usamos.
 crtsh.sh hackerone.com | tee -a crtsh.txt
 ```
 
-![label text](imgs/03.png)
+![label text](imgs/04.png)
 
 
 
