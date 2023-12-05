@@ -25,6 +25,8 @@ katana -u https://hackerone.com -jc | grep ".js$" | uniq | sort > katana_js.txt
 
 ## [Gau](https://github.com/lc/gau)
 
+[Link Udemy](https://www.udemy.com/course/recon-for-bug-bounty-penetration-testers-ethical-hackers/learn/lecture/35453790#overview)
+
 ```ruby
 sudo apt install gccgo-go
 sudo apt-get install golang-go
@@ -44,6 +46,23 @@ Filtros
 ```ruby
 cat links_buscados.txt | grep ? | tee hackerone_parameters.txt
 cat links_buscados.txt | grep -E *[.]js | tee hackerone_parameters_js.txt
+```
+
+## [GoSpider](https://github.com/jaeles-project/gospider)
+
+[Link Udemy](https://www.udemy.com/course/recon-for-bug-bounty-penetration-testers-ethical-hackers/learn/lecture/35453800#overview)
+
+```ruby
+sudo apt install gccgo-go
+sudo apt-get install golang-go
+GO111MODULE=on go install github.com/jaeles-project/gospider@latest
+sudo mv ~/go/bin/gospider /usr/local/bin
+```
+
+Forma de usarlo
+
+```ruby
+gospider -w -s https://hackerone.com -o link_hackerone.txt
 ```
 
 ## [WaybackUrls](https://github.com/tomnomnom/waybackurls)
