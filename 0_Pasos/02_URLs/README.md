@@ -23,6 +23,29 @@ Traer los archivos .js
 katana -u https://hackerone.com -jc | grep ".js$" | uniq | sort > katana_js.txt
 ```
 
+## [Gau](https://github.com/lc/gau)
+
+```ruby
+sudo apt install gccgo-go
+sudo apt-get install golang-go
+go install github.com/lc/gau/v2/cmd/gau@latest
+cd ~/go/bin
+mv ~/go/bin/gau /usr/local/bin
+```
+
+Forma de usar el raspador de links
+
+```ruby
+sudo echo "hackerone.com" | gau > links_buscados.txt
+```
+
+Filtros
+
+```ruby
+cat links_buscados.txt | grep ? | tee hackerone_parameters.txt
+cat links_buscados.txt | grep -E *[.]js | tee hackerone_parameters_js.txt
+```
+
 ## [WaybackUrls](https://github.com/tomnomnom/waybackurls)
 
 [Link Udemy](https://www.udemy.com/course/recon-for-bug-bounty-pentesting-ethicalhacking-by-shifa-rohit-hacktify/learn/lecture/21721090#questions)
