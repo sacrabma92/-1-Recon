@@ -133,6 +133,19 @@ python3 SecretFinder.py
 cat katana_js.txt | while read url; do python3 /opt/secretfinder/SecretFinder.py -i $url -o cli >> secret.txt; done
 ```
 
+## [gf](https://github.com/tomnomnom/gf)
+
+[Link Udemy](https://www.udemy.com/course/recon-for-bug-bounty-penetration-testers-ethical-hackers/learn/lecture/35462246#overview)
+
+```ruby
+go install github.com/tomnomnom/gf@latest
+sudo mv ~/go/bin/gf /usr/local/bin
+mkdir ~/.gf
+cp ~/go/pkg/mod/github.com/tomnomnom/gf@v0.0.0-20200618134122-dcd4c361f9f5/examples/* ~/.gf
+git clone https://github.com/1ndianl33t/Gf-Patterns
+mv ~/Gf-Patterns/*.json ~/.gf
+```
+
 ## [Qsreplace](https://github.com/tomnomnom/qsreplace)
 
 
