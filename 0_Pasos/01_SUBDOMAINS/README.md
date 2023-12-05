@@ -23,7 +23,7 @@ sudo cp subfinder /usr/bin
 Corremos la herramienta:
 
 ```ruby
-subfinder -d hackerone.com | tee -a subfinder.txt
+subfinder -d hackerone.com -o subfinder.txt
 ```
 
 ![label text](imgs/01.png)
@@ -31,11 +31,20 @@ subfinder -d hackerone.com | tee -a subfinder.txt
 
 ## [Amass](https://github.com/owasp-amass/amass)
 
+[VIDEO Demostrativo](https://www.youtube.com/watch?v=rP7dcYRATnY&ab_channel=BePractical)
+
+DEBEMOS configurar las APIS
 Descargamos el binario y lo descomprimimos y lo pegamos en la ruta.
 
 ```ruby
 unzip amass_Linux_amd64.zip
 mv amass_Linux_amd64/amass /usr/local/bin/
+```
+
+Para enumerar subdominio
+
+```ruby
+amass intel -d hackerone.com -whois -v
 ```
 
 ## [Assetfinder](https://github.com/tomnomnom/assetfinder)
@@ -138,3 +147,10 @@ Realizamos la busqueda y vamos a la pestaña RELATIONS
 
 [Link Udemy](https://www.udemy.com/course/recon-for-bug-bounty-pentesting-ethicalhacking-by-shifa-rohit-hacktify/learn/lecture/21362500#questions)
 
+## WEB [Cencys](https://search.censys.io/#)
+
+[Link Udemy](https://www.udemy.com/course/recon-for-bug-bounty-penetration-testers-ethical-hackers/learn/lecture/35439270#overview)
+
+# Filtrar TODOS los dominios encontrados
+
+[Link Udemy](https://www.udemy.com/course/recon-for-bug-bounty-penetration-testers-ethical-hackers/learn/lecture/35438808#overview)
