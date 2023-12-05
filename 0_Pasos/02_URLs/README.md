@@ -67,6 +67,13 @@ gospider -w -s https://hackerone.com -o link_hackerone.txt
 
 ## [WaybackUrls](https://github.com/tomnomnom/waybackurls)
 
+```ruby
+sudo apt install gccgo-go
+sudo apt-get install golang-go
+go install github.com/tomnomnom/waybackurls@latest
+sudo mv ~/go/bin/waybackurls /usr/local/bin
+```
+
 ### [WayBack Burpsuite](https://www.udemy.com/course/recon-for-bug-bounty-pentesting-ethicalhacking-by-shifa-rohit-hacktify/learn/lecture/21762876#overview)
 
 -> AQUI: busamos en el link lo siguiente: ?url=hackerone.com/  y procedemos a cambiarlo por la url que necesitemos buscar y la pegamos en el navegador.
@@ -76,6 +83,40 @@ https://web.archive.org/web/timemap/json?url=hackerone.com/&fl=timestamp:4,origi
 ```
 
 ### [WayBack Automation](https://www.udemy.com/course/recon-for-bug-bounty-pentesting-ethicalhacking-by-shifa-rohit-hacktify/learn/lecture/21762880#overview)
+
+[Link Udemy](https://www.udemy.com/course/recon-for-bug-bounty-pentesting-ethicalhacking-by-shifa-rohit-hacktify/learn/lecture/21762880#overview)
+
+Es un script que lo hace de forma semi-manual
+Buscamos url y le colocamos la palabra fuzz con el programa qsreplace.
+
+```ruby
+waybackurls hackerone.com | tee test_url.txt |  qsreplace '"><script>confirm(1)</script>' | tee  combinedfuzz.json  && cat combinedfuzz.json | while read host do ; do curl --silent --path-as-is --insecure "$host" | grep -qs "<script>confirm(1)" && echo "$host \033[0;31mVulnerable\n" || echo "$host \033[0;32mNot Vulnerable\n";done
+```
+
+## [Paramspider](https://github.com/devanshbatham/ParamSpider)
+
+Paramspiderle permite recuperar URL relacionadas con cualquier dominio o una lista de dominios de Wayback Achives. Filtra las URL "aburridas", lo que le permite centrarse en las que más importan.
+
+[Link Udemy](https://www.udemy.com/course/recon-for-bug-bounty-pentesting-ethicalhacking-by-shifa-rohit-hacktify/learn/lecture/21762882#overview)
+
+```ruby
+git clone https://github.com/devanshbatham/paramspider
+cd paramspider
+pip install .
+sudo mv /home/kali/.local/bin/paramspider /usr/local/bin
+```
+
+Forma de uso de la herramienta.
+Se crea una carpeta con todos los datos de saldia.
+
+```ruby
+paramspider -d hackerone.com
+```
+
+```ruby
+paramspider -d hackerone.com
+cat results/hackerone.com.txt | tee yy.json | qsreplace '"><script>confirm(1)</script>' | while read host do; do curl --silent --path-as-is --insecure "$host" | grep -qs "<script>confirm(1)" && echo "$host \033[0;31mVulnerable\n" || echo "$host \033[0;32mNot Vulnerable\n"; done
+```
 
 # Buscador de Parametros
 
@@ -91,6 +132,9 @@ python3 SecretFinder.py
 ```ruby
 cat katana_js.txt | while read url; do python3 /opt/secretfinder/SecretFinder.py -i $url -o cli >> secret.txt; done
 ```
+
+## [Qsreplace](https://github.com/tomnomnom/qsreplace)
+
 
 
 
