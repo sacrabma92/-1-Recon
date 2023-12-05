@@ -16,7 +16,7 @@ Corremos la herramienta:
 subfinder -d hackerone.com | tee -a subfinder.txt
 ```
 
-![label text](img/01.png)
+![label text](imgs/01.png)
 
 ## [Httpx](https://github.com/projectdiscovery/httpx)
 
