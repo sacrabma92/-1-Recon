@@ -21,9 +21,12 @@ subfinder -d hackerone.com | tee -a subfinder.txt
 
 ## [Httpx](https://github.com/projectdiscovery/httpx)
 
+Descargamos el binario y lo pegamos en la ruta
 
-
-
+```ruby
+unzip httpx_1.3.7_linux_amd64.zip
+sudo mv httpx /usr/local/bin
+```
 
 
 
