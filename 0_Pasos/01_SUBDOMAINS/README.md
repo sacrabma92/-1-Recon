@@ -47,6 +47,12 @@ Para enumerar subdominio
 amass intel -d hackerone.com -whois -v
 ```
 
+Para filtrar el archivo
+
+```
+cat amass.txt | awk '{print $1}' | sort -u
+```
+
 ## [Assetfinder](https://github.com/tomnomnom/assetfinder)
 
 Hacemos un git clone del repositorio
@@ -100,7 +106,7 @@ sudo chmod +x crtsh.sh
 Para ejecutar el programa usamo3.
 
 ```ruby
-crtsh.sh hackerone.com | tee -a crtsh.txt
+crtsh.sh hackerone.com 
 ```
 
 ![label text](imgs/04.png)
