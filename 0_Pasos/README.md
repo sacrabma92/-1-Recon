@@ -59,6 +59,51 @@ assetfinder -subs-only hackerone.com | tee -a assetfinder.txt
 ![label text](imgs/02.png)
 
 
+## [Sublist3r](https://github.com/aboul3la/Sublist3r)
+
+```ruby
+cd /opt
+git clone https://github.com/aboul3la/Sublist3r.git
+cd Sublist3r
+sudo pip install -r requirements.txt
+```
+
+Lo dejamos en la carpeta /opt y para correr el programa usamos
+
+```ruby
+ python3 sublist3r.py -d hackerone.com | tee -a ~/Bug_Bounty/RECON/sublist3r.txt
+```
+
+![label text](imgs/03.png)
+
+## [CRT.SH](https://gist.github.com/1N3/dec432d14fec84e09733f39669ebca0f)
+
+Creamos un archivo llamado crtsh.sh y pegamos todo el codigo.
+
+```ruby
+cd /usr/local/bin
+sudo nano crtsh.sh
+sudo chmod +x crtsh.sh
+```
+
+Para ejecutar el programa usamos.
+
+```ruby
+crtsh.sh hackerone.com | tee -a crtsh.txt
+```
+
+![label text](imgs/03.png)
+
+
+
+
+
+
+
+
+
+
+
 
 
 
