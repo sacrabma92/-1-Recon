@@ -11,6 +11,10 @@ unzip httpx_1.3.7_linux_amd64.zip
 sudo mv httpx /usr/local/bin
 ```
 
+```ruby
+cat all_domains.txt | httpx -sc -title -cl -t 100 -o Subdominios_Vivos.txt
+```
+
 ## [Subfinder](https://github.com/projectdiscovery/subfinder)
 
 Descargamos el binario y lo descomprimimos y lo pegamos el la ruta.
