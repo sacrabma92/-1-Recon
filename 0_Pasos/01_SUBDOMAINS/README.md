@@ -64,6 +64,7 @@ Hacemos un git clone del repositorio
 ```ruby
 git clone https://github.com/tomnomnom/assetfinder.git
 cd assetfinder
+go list -m all
 go mod init assetfinder
 go build .
 sudo mv assetfinder /usr/local/bin
