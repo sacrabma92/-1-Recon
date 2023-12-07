@@ -82,6 +82,10 @@ assetfinder -subs-only hackerone.com | tee -a assetfinder.txt
 ## [Sublist3r](https://github.com/aboul3la/Sublist3r)
 
 ```ruby
+sudo apt install sublist3r
+```
+
+```ruby
 cd /opt
 git clone https://github.com/aboul3la/Sublist3r.git
 cd Sublist3r
