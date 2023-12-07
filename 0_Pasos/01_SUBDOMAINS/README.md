@@ -12,7 +12,9 @@ sudo mv httpx /usr/local/bin
 ```
 
 ```ruby
-cat all_domains.txt | httpx -sc -title -cl -t 100 -o Subdominios_Vivos.txt
+cat * | sort -u | wc -l
+ cat * | grep -E *.ups.com | sort -u | tee all_subdomains.txt
+cat all_subdomains.txt | httpx -sc -title -cl -t 100 -o Subdominios_Vivos.txt
 ```
 
 ## [Subfinder](https://github.com/projectdiscovery/subfinder)
