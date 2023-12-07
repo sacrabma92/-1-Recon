@@ -87,6 +87,12 @@ cd Sublist3r
 sudo pip install -r requirements.txt
 ```
 
+Si da error despues de instalar python ejecutamos el siguiente comando
+
+```ruby
+sudo rm /usr/lib/python3.11/EXTERNALLY-MANAGED
+```
+
 Lo dejamos en la carpeta /opt y para correr el programa usamos. Pegamos el archivo de salida en los demas
 
 ```ruby
